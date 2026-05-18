@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PT Ecowaste Indonesia Prima - Profil Perusahaan</title>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FAVICON -->
+  <img="../assets/logo.png">
+
+  <style>
+    .lang-switcher{
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+
+    .lang-switcher button{
+      border:1px solid rgba(255,255,255,.4);
+      background:transparent;
+      color:white;
+      padding:6px 10px;
+      border-radius:20px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    .lang-switcher button:hover,
+    .lang-switcher button.active{
+      background:#9ccc65;
+      color:#003d33;
+    }
+
+    .wa-float{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      width:60px;
+      height:60px;
+      background:#25D366;
+      border-radius:50%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index:999999;
+      box-shadow:0 8px 20px rgba(0,0,0,.25);
+    }
+
+    .wa-float img{
+      width:35px;
+      height:35px;
+      object-fit:contain;
+    }
+  </style>
+</head>
+
+<body>
+
+<a href="https://wa.me/6285891099220" class="wa-float" target="_blank">
+  <img src="../assets/wa.png" alt="WhatsApp">
+</a>
+
+<div class="full-green-bar">
+  <div class="konten-kiri"></div>
+  <div class="konten-kanan"></div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="container nav-content">
+   <div class="logo">
+  <img src="../assets/logo.png" alt="EcoWaste Logo" style="width:45px;height:45px;object-fit:contain;margin-right:10px;">
+  <div style="font-weight:800;color:white;">EcoWaste</div>
+</div>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <div class="menu" id="nav-menu">
+      <div class="lang-switcher">
+        <button type="button" onclick="changeLang('id')" id="btn-id">ID</button>
+        <button type="button" onclick="changeLang('en')" id="btn-en">EN</button>
+        <button type="button" onclick="changeLang('zh-CN')" id="btn-zh-CN">中文</button>
+      </div>
+
+      <a href="index.html" data-lang="navHome">Home</a>
+      <a href="index.html#about" data-lang="navAbout">About Us</a>
+      <a href="index.html#vision" data-lang="navVision">Visi & Misi</a>
+      <a href="index.html#services" data-lang="navServices">Our Services</a>
+      <a href="index.html#legality" data-lang="navLegality">Legality & Compliance</a>
+      <a href="index.html#contact" data-lang="navContact">Kontak</a>
+      <a href="chat.html" class="btn-chat" data-lang="navChat">Chat</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="eco-bg">
+    <i class="fa-solid fa-earth-asia eco-icon hero-earth"></i>
+    <i class="fa-solid fa-leaf eco-icon hero-leaf"></i>
+    <i class="fa-solid fa-recycle eco-icon hero-recycle"></i>
+  </div>
+
+  <div class="container hero-wrapper">
+    <div class="hero-text">
+      <span class="tagline" data-lang="tagline">~ Waste to Value</span>
+
+      <h1 data-lang="heroTitle">
+        Membangun Masa Depan yang Lebih Bersih & Hijau
+      </h1>
+
+      <p data-lang="heroDesc">
+        PT Ecowaste Indonesia Prima menyediakan solusi logistik limbah B3 yang aman, efisien, dan bertanggung jawab di seluruh Indonesia.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#about" class="btn" data-lang="explore">Jelajahi</a>
+        <a href="https://wa.me/6285183326247" target="_blank" class="btn-outline" data-lang="contactBtn">Hubungi Kami</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop" alt="Environment">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <div class="eco-bg">
+    <i class="fa-solid fa-seedling eco-icon about-seed"></i>
+    <i class="fa-solid fa-tree eco-icon about-tree"></i>
+    <i class="fa-solid fa-water eco-icon about-water"></i>
+  </div>
+
+  <div class="container">
+    <div class="about-text">
+      <div class="section-title left">
+        <h2 data-lang="aboutTitle">Tentang Kami</h2>
+      </div>
+
+      <p data-lang="aboutText1">
+        PT Ecowaste Indonesia Prima (EIP) adalah perusahaan nasional yang bergerak di bidang jasa transportasi limbah B3 (Bahan Berbahaya dan Beracun) dengan standar tinggi, berorientasi pada keselamatan, kepatuhan regulasi serta keberlangsungan lingkungan.
+      </p>
+
+      <p data-lang="aboutText2">
+        Didirikan dengan komitmen untuk menjadi mitra terpercaya bagi industri, kami menghadirkan solusi logistik mulai dari pengangkutan hingga pengelolaan akhir sesuai peraturan yang berlaku.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- VISION -->
+<section class="vision" id="vision" style="background:#f9f9f9;">
+  <div class="eco-bg">
+    <i class="fa-solid fa-lightbulb eco-icon vision-light"></i>
+    <i class="fa-solid fa-fan eco-icon vision-wind"></i>
+    <i class="fa-solid fa-leaf eco-icon vision-leaf"></i>
+  </div>
+
+  <div class="container">
+    <div class="section-title">
+      <h2 data-lang="visionTitle">Visi & Misi</h2>
+    </div>
+
+    <div class="vision-grid">
+      <div class="vision-card">
+        <h3 data-lang="visionHead">Visi</h3>
+        <p data-lang="visionText">
+          Menjadi perusahaan transporter limbah B3 terdepan di Indonesia yang unggul dalam keselamatan, kepatuhan, mempertimbangkan lingkungan dan inovasi yang berkelanjutan.
+        </p>
+      </div>
+
+      <div class="vision-card">
+        <h3 data-lang="missionHead">Misi</h3>
+        <ul class="ul-legality">
+          <li data-lang="mission1">Layanan transportasi aman, cepat, dan sesuai regulasi.</li>
+          <li data-lang="mission2">Mengutamakan keselamatan kerja dan perlindungan lingkungan.</li>
+          <li data-lang="mission3">Kemitraan jangka panjang melalui pelayanan profesional.</li>
+          <li data-lang="mission4">SDM yang kompeten dan berintegritas.</li>
+          <li data-lang="mission5">Teknologi modern untuk efisiensi dan transparansi.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE VALUES -->
+<section id="core-values" class="eip-values-section">
+  <div class="eco-bg">
+    <i class="fa-solid fa-shield-heart eco-icon value-shield"></i>
+    <i class="fa-solid fa-recycle eco-icon value-recycle"></i>
+    <i class="fa-solid fa-industry eco-icon value-industry"></i>
+  </div>
+  <div class="eip-why-container-title">
+    <div class="brand-top">
+      <img src="../assets/logo.png" alt="Logo" class="mini-logo">
+      <span>Ecowaste Indonesia Prima</span>
+    </div>
+
+  <div class="eip-container">
+    <div class="eip-header">
+      <h2 class="eip-main-title" data-lang="coreTitle">Our Core Values</h2>
+    </div>
+
+    <div class="eip-values-list">
+      <div class="eip-value-card">
+        <div class="eip-hexagon">
+          <span data-lang="value1Title">Excellence</span>
+        </div>
+        <div class="eip-description">
+          <p data-lang="value1Desc">Memberikan layanan terbaik dengan standar tinggi disertai dengan layanan hospitality terhadap semua mitra dan partner</p>
+        </div>
+      </div>
+
+      <div class="eip-value-card">
+        <div class="eip-hexagon">
+          <span data-lang="value2Title">Compliance</span>
+        </div>
+        <div class="eip-description">
+          <p data-lang="value2Desc">Mematuhi serta melengkapi seluruh regulasi dan perizinan yang berlaku di bidang transportasi limbah B3</p>
+        </div>
+      </div>
+
+      <div class="eip-value-card">
+        <div class="eip-hexagon">
+          <span data-lang="value3Title">Operational Safety</span>
+        </div>
+        <div class="eip-description">
+          <p data-lang="value3Desc">Menjadikan keselamatan sebagai prioritas utama dalam landasan bekerja untuk setiap stakeholder</p>
+        </div>
+      </div>
+
+      <div class="eip-value-card">
+        <div class="eip-hexagon">
+          <span data-lang="value4Title">Work Integrity</span>
+        </div>
+        <div class="eip-description">
+          <p data-lang="value4Desc">Menjunjung tinggi integritas dalam setiap aktivitas kinerja perorangan maupun perusahaan</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="eip-services-section">
+  <div class="eco-bg">
+    <i class="fa-solid fa-truck eco-icon service-truck"></i>
+    <i class="fa-solid fa-oil-can eco-icon service-oil"></i>
+    <i class="fa-solid fa-solar-panel eco-icon service-solar"></i>
+  </div>
+<div class="eip-why-container-title">
+    <div class="brand-top">
+      <img src="../assets/logo.png" alt="Logo" class="mini-logo">
+      <span>Ecowaste Indonesia Prima</span>
+    </div>
+  <div class="eip-container">
+    <h2 class="eip-services-title" data-lang="servicesTitle">Our Services</h2>
+
+    <div class="eip-services-list">
+      <div class="eip-service-item">
+        <div class="eip-service-hex">
+          <img src="../assets/mobil.png" alt="Transportasi Icon">
+        </div>
+        <div class="eip-service-content">
+          <h3 data-lang="service1Title">Transportasi Limbah B3</h3>
+          <p data-lang="service1Desc">Layanan pengangkutan limbah B3 dari lokasi klien menuju fasilitas pengolahan atau pemusnahan dengan standar keamanan tinggi.</p>
+        </div>
+      </div>
+
+      <div class="eip-service-item">
+        <div class="eip-service-hex">
+          <img src="../assets/orang.png" alt="Konsultasi Icon">
+        </div>
+        <div class="eip-service-content">
+          <h3 data-lang="service2Title">Konsultasi Pengelolaan Limbah</h3>
+          <p data-lang="service2Desc">Memberikan solusi strategis dalam pengelolaan limbah B3 yang efisien dan sesuai ketentuan.</p>
+        </div>
+      </div>
+
+      <div class="eip-service-item">
+        <div class="eip-service-hex">
+          <img src="../assets/lampu.png" alt="Logistics Icon">
+        </div>
+        <div class="eip-service-content">
+          <h3 data-lang="service3Title">Integrated Waste Logistics</h3>
+          <p data-lang="service3Desc">Sistem logistik terintegrasi untuk monitoring, tracking, dan pelaporan secara real-time dan transparan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="eip-why-section" id="why-us">
+  <div class="eco-bg">
+    <i class="fa-solid fa-shield-heart eco-icon value-shield"></i>
+    <i class="fa-solid fa-recycle eco-icon value-recycle"></i>
+    <i class="fa-solid fa-industry eco-icon value-industry"></i>
+  </div>
+
+  <div class="eip-why-container-title">
+    <div class="brand-top">
+      <img src="../assets/logo.png" alt="Logo" class="mini-logo">
+      <span>Ecowaste Indonesia Prima</span>
+    </div>
+
+    <h2 class="eip-why-title" data-lang="whyTitle">Why Choose Us</h2>
+  </div>
+
+  <div class="eip-container eip-why-bg-slope">
+    <div class="eip-why-content">
+      <div>
+        <ul class="eip-why-list">
+          <li>
+            <div class="eip-icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+            <span data-lang="why1">Special safety B3 fleet</span>
+          </li>
+
+          <li>
+            <div class="eip-icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+            <span data-lang="why2">Certified drivers and workers</span>
+          </li>
+
+          <li>
+            <div class="eip-icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+            <span data-lang="why3">Technology-based tracking and monitoring system</span>
+          </li>
+
+          <li>
+            <div class="eip-icon-circle"><i class="fa-solid fa-arrow-right"></i></div>
+            <span data-lang="why4">Full compliance regulations</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="eip-why-text">
+        <p data-lang="whyText1">Memilih mitra dalam pengangkutan limbah B3 bukan hanya tentang layanan, tetapi tentang kepercayaan, kepatuhan, dan jaminan keselamatan.</p>
+        <p data-lang="whyText2">PT Ecowaste Indonesia Prima hadir sebagai solusi yang memberikan nilai lebih bagi setiap klien.</p>
+        <p data-lang="whyText3">Setiap layanan kami dirancang untuk mendukung praktik industri yang ramah lingkungan dan bertanggung jawab.</p>
+        <p data-lang="whyText4">Dengan kombinasi pengalaman, sistem yang terintegrasi, dan komitmen tinggi terhadap kualitas, PT Ecowaste Indonesia Prima menjadi pilihan tepat bagi perusahaan yang mengutamakan keamanan, kepatuhan, dan keberlanjutan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries-serve" id="industries">
+  <div class="eco-bg">
+    <i class="fa-solid fa-industry eco-icon industry-factory"></i>
+    <i class="fa-solid fa-flask eco-icon industry-lab"></i>
+    <i class="fa-solid fa-leaf eco-icon industry-leaf"></i>
+  </div>
+
+  <div class="industries-header">
+    <div class="header-inner">
+      <div class="brand-top">
+        <img src="../assets/logo.png" alt="Logo" class="mini-logo">
+        <span>Ecowaste Indonesia Prima</span>
+      </div>
+
+      <h1 data-lang="industriesTitle">
+        Industries We<br>Serve
+      </h1>
+    </div>
+  </div>
+
+  <div class="industries-body">
+    <p class="desc-text text-justify" data-lang="industriesDesc">
+      Ecowaste Indonesia Prima siap untuk melayani transportasi limbah B3 dari berbagai sektor industri sesuai dengan izin dan legalitas yang telah diberikan oleh Kementrian Lingkungan Hidup dan Kementrian Perhubungan.
+    </p>
+
+    <ul class="list-container">
+      <li data-lang="industry1">Industri & Manufaktur</li>
+      <li data-lang="industry2">Pertambangan & Energi</li>
+      <li data-lang="industry3">Oil & Gas</li>
+      <li data-lang="industry4">Rumah Sakit & Fasilitas Kesehatan</li>
+      <li data-lang="industry5">Kimia & Petrokimia</li>
+      <li data-lang="industry6">Farmasi</li>
+      <li data-lang="industry7">Logistik & Infrastruktur</li>
+      <li data-lang="industry8">Pemerintahan atau Instansi</li>
+    </ul>
+  </div>
+</section>
+
+<!-- LEGALITY -->
+<section id="legality" class="legality-section">
+  <div class="eco-bg">
+    <i class="fa-solid fa-scale-balanced eco-icon legal-scale"></i>
+    <i class="fa-solid fa-file-shield eco-icon legal-file"></i>
+    <i class="fa-solid fa-circle-check eco-icon legal-check"></i>
+  </div>
+
+  <div class="shape-right"></div>
+
+  <div class="container-legality">
+    <div class="brand">
+      <img src="../assets/logo.png" alt="logo">
+      <h3>Ecowaste Indonesia Prima</h3>
+    </div>
+
+    <h1 data-lang="legalityTitle">
+      Legality &<br>
+      Compliance
+    </h1>
+
+    <div class="content">
+      <p data-lang="legalityDesc">
+        PT Ecowaste Indonesia Prima beroperasi dengan perizinan resmi dan mengikuti seluruh regulasi yang berlaku di Indonesia, termasuk:
+      </p>
+
+      <ul class="ul-legality">
+        <li data-lang="legal1">Izin Pengangkutan Limbah B3</li>
+        <li data-lang="legal2">Izin Kementerian Lingkungan Hidup</li>
+        <li data-lang="legal3">Izin Kementrian Perhubungan</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="bottom-wave"></div>
+</section>
+
+<!-- FOOTER -->
+<footer class="glass-footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-box">
+      <h3>EcoWaste</h3>
+      <p data-lang="footerDesc">
+        Solusi transportasi limbah B3 yang aman, profesional, dan berkelanjutan di seluruh Indonesia.
+      </p>
+    </div>
+
+    <div class="footer-box">
+      <h3 data-lang="footerNav">Navigation</h3>
+      <a href="index.html" data-lang="footerHome">Beranda</a>
+      <a href="#about" data-lang="footerAbout">Tentang</a>
+      <a href="#vision" data-lang="footerVision">Visi & Misi</a>
+      <a href="#legality" data-lang="footerLegal">Perizinan</a>
+      <a href="#contact" data-lang="footerContact">Kontak</a>
+    </div>
+
+    <div class="footer-box">
+      <h3 data-lang="footerContactTitle">Contact</h3>
+      <p><i class="fa-solid fa-phone"></i> +62 812 9290 2818</p>
+      <p><i class="fa-solid fa-envelope"></i> info@ecowasteindonesia.com</p>
+      <p><i class="fa-solid fa-location-dot"></i> Jakarta Selatan</p>
+    </div>
+
+    <div class="footer-box">
+      <h3 data-lang="footerFollow">Follow Us</h3>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 PT Ecowaste Indonesia Prima • All Rights Reserved</p>
+  </div>
+</footer>
+
+<script>
+const translations = {
+  id: {
+    navHome: "Home",
+    navAbout: "About Us",
+    navVision: "Visi & Misi",
+    navServices: "Our Services",
+    navLegality: "Legality & Compliance",
+    navContact: "Kontak",
+    navChat: "Chat",
+
+    tagline: "~ Waste to Value",
+    heroTitle: "Membangun Masa Depan yang Lebih Bersih & Hijau",
+    heroDesc: "PT Ecowaste Indonesia Prima menyediakan solusi logistik limbah B3 yang aman, efisien, dan bertanggung jawab di seluruh Indonesia.",
+    explore: "Jelajahi",
+    contactBtn: "Hubungi Kami",
+
+    aboutTitle: "Tentang Kami",
+    aboutText1: "PT Ecowaste Indonesia Prima (EIP) adalah perusahaan nasional yang bergerak di bidang jasa transportasi limbah B3 (Bahan Berbahaya dan Beracun) dengan standar tinggi, berorientasi pada keselamatan, kepatuhan regulasi serta keberlangsungan lingkungan.",
+    aboutText2: "Didirikan dengan komitmen untuk menjadi mitra terpercaya bagi industri, kami menghadirkan solusi logistik mulai dari pengangkutan hingga pengelolaan akhir sesuai peraturan yang berlaku.",
+
+    visionTitle: "Visi & Misi",
+    visionHead: "Visi",
+    visionText: "Menjadi perusahaan transporter limbah B3 terdepan di Indonesia yang unggul dalam keselamatan, kepatuhan, mempertimbangkan lingkungan dan inovasi yang berkelanjutan.",
+    missionHead: "Misi",
+    mission1: "Layanan transportasi aman, cepat, dan sesuai regulasi.",
+    mission2: "Mengutamakan keselamatan kerja dan perlindungan lingkungan.",
+    mission3: "Kemitraan jangka panjang melalui pelayanan profesional.",
+    mission4: "SDM yang kompeten dan berintegritas.",
+    mission5: "Teknologi modern untuk efisiensi dan transparansi.",
+
+    coreTitle: "Our Core Values",
+    value1Title: "Excellence",
+    value1Desc: "Memberikan layanan terbaik dengan standar tinggi disertai dengan layanan hospitality terhadap semua mitra dan partner",
+    value2Title: "Compliance",
+    value2Desc: "Mematuhi serta melengkapi seluruh regulasi dan perizinan yang berlaku di bidang transportasi limbah B3",
+    value3Title: "Operational Safety",
+    value3Desc: "Menjadikan keselamatan sebagai prioritas utama dalam landasan bekerja untuk setiap stakeholder",
+    value4Title: "Work Integrity",
+    value4Desc: "Menjunjung tinggi integritas dalam setiap aktivitas kinerja perorangan maupun perusahaan",
+
+    servicesTitle: "Our Services",
+    service1Title: "Transportasi Limbah B3",
+    service1Desc: "Layanan pengangkutan limbah B3 dari lokasi klien menuju fasilitas pengolahan atau pemusnahan dengan standar keamanan tinggi.",
+    service2Title: "Konsultasi Pengelolaan Limbah",
+    service2Desc: "Memberikan solusi strategis dalam pengelolaan limbah B3 yang efisien dan sesuai ketentuan.",
+    service3Title: "Integrated Waste Logistics",
+    service3Desc: "Sistem logistik terintegrasi untuk monitoring, tracking, dan pelaporan secara real-time dan transparan.",
+
+    whyTitle: "Why Choose Us",
+    why1: "Armada khusus berstandar keselamatan B3",
+    why2: "Pengemudi dan pekerja tersertifikasi",
+    why3: "Sistem pelacakan dan monitoring berbasis teknologi",
+    why4: "Kepatuhan penuh terhadap regulasi",
+    whyText1: "Memilih mitra dalam pengangkutan limbah B3 bukan hanya tentang layanan, tetapi tentang kepercayaan, kepatuhan, dan jaminan keselamatan.",
+    whyText2: "PT Ecowaste Indonesia Prima hadir sebagai solusi yang memberikan nilai lebih bagi setiap klien.",
+    whyText3: "Setiap layanan kami dirancang untuk mendukung praktik industri yang ramah lingkungan dan bertanggung jawab.",
+    whyText4: "Dengan kombinasi pengalaman, sistem yang terintegrasi, dan komitmen tinggi terhadap kualitas, PT Ecowaste Indonesia Prima menjadi pilihan tepat bagi perusahaan yang mengutamakan keamanan, kepatuhan, dan keberlanjutan.",
+
+    industriesTitle: "Industries We<br>Serve",
+    industriesDesc: "Ecowaste Indonesia Prima siap untuk melayani transportasi limbah B3 dari berbagai sektor industri sesuai dengan izin dan legalitas yang telah diberikan oleh Kementrian Lingkungan Hidup dan Kementrian Perhubungan.",
+    industry1: "Industri & Manufaktur",
+    industry2: "Pertambangan & Energi",
+    industry3: "Oil & Gas",
+    industry4: "Rumah Sakit & Fasilitas Kesehatan",
+    industry5: "Kimia & Petrokimia",
+    industry6: "Farmasi",
+    industry7: "Logistik & Infrastruktur",
+    industry8: "Pemerintahan atau Instansi",
+
+    legalityTitle: "Legality &<br>Compliance",
+    legalityDesc: "PT Ecowaste Indonesia Prima beroperasi dengan perizinan resmi dan mengikuti seluruh regulasi yang berlaku di Indonesia, termasuk:",
+    legal1: "Izin Pengangkutan Limbah B3",
+    legal2: "Izin Kementerian Lingkungan Hidup",
+    legal3: "Izin Kementrian Perhubungan",
+
+    footerDesc: "Solusi transportasi limbah B3 yang aman, profesional, dan berkelanjutan di seluruh Indonesia.",
+    footerNav: "Navigation",
+    footerHome: "Beranda",
+    footerAbout: "Tentang",
+    footerVision: "Visi & Misi",
+    footerLegal: "Perizinan",
+    footerContact: "Kontak",
+    footerContactTitle: "Contact",
+    footerFollow: "Follow Us"
+  },
+
+  en: {
+    navHome: "Home",
+    navAbout: "About Us",
+    navVision: "Vision & Mission",
+    navServices: "Our Services",
+    navLegality: "Legality & Compliance",
+    navContact: "Contact",
+    navChat: "Chat",
+
+    tagline: "~ Waste to Value",
+    heroTitle: "Building a Cleaner & Greener Future",
+    heroDesc: "PT Ecowaste Indonesia Prima provides safe, efficient, and responsible B3 hazardous waste logistics solutions throughout Indonesia.",
+    explore: "Explore",
+    contactBtn: "Contact Us",
+
+    aboutTitle: "About Us",
+    aboutText1: "PT Ecowaste Indonesia Prima (EIP) is a national company engaged in B3 hazardous waste transportation services with high standards, focusing on safety, regulatory compliance, and environmental sustainability.",
+    aboutText2: "Established with a commitment to becoming a trusted partner for industries, we provide logistics solutions from transportation to final waste management in accordance with applicable regulations.",
+
+    visionTitle: "Vision & Mission",
+    visionHead: "Vision",
+    visionText: "To become a leading B3 hazardous waste transporter company in Indonesia, excelling in safety, compliance, environmental responsibility, and sustainable innovation.",
+    missionHead: "Mission",
+    mission1: "Provide safe, fast, and regulation-compliant transportation services.",
+    mission2: "Prioritize occupational safety and environmental protection.",
+    mission3: "Build long-term partnerships through professional services.",
+    mission4: "Develop competent and high-integrity human resources.",
+    mission5: "Use modern technology for efficiency and transparency.",
+
+    coreTitle: "Our Core Values",
+    value1Title: "Excellence",
+    value1Desc: "Providing the best services with high standards supported by hospitality service for all clients and partners.",
+    value2Title: "Compliance",
+    value2Desc: "Complying with and fulfilling all regulations and permits applicable to B3 hazardous waste transportation.",
+    value3Title: "Operational Safety",
+    value3Desc: "Making safety the main priority in every work activity for all stakeholders.",
+    value4Title: "Work Integrity",
+    value4Desc: "Upholding integrity in every individual and corporate performance activity.",
+
+    servicesTitle: "Our Services",
+    service1Title: "B3 Waste Transportation",
+    service1Desc: "Transportation services for B3 hazardous waste from client locations to treatment or disposal facilities with high safety standards.",
+    service2Title: "Waste Management Consultation",
+    service2Desc: "Providing strategic solutions for efficient B3 hazardous waste management in accordance with regulations.",
+    service3Title: "Integrated Waste Logistics",
+    service3Desc: "Integrated logistics system for real-time monitoring, tracking, and transparent reporting.",
+
+    whyTitle: "Why Choose Us",
+    why1: "Special safety B3 fleet",
+    why2: "Certified drivers and workers",
+    why3: "Technology-based tracking and monitoring system",
+    why4: "Full compliance regulations",
+    whyText1: "Choosing a partner for B3 hazardous waste transportation is not only about service, but also about trust, compliance, and safety assurance.",
+    whyText2: "PT Ecowaste Indonesia Prima provides solutions that deliver added value for every client.",
+    whyText3: "Each of our services is designed to support environmentally friendly and responsible industrial practices.",
+    whyText4: "With experience, integrated systems, and a strong commitment to quality, PT Ecowaste Indonesia Prima is the right choice for companies prioritizing safety, compliance, and sustainability.",
+
+    industriesTitle: "Industries We<br>Serve",
+    industriesDesc: "Ecowaste Indonesia Prima is ready to serve B3 hazardous waste transportation from various industrial sectors in accordance with permits and legality granted by the Ministry of Environment and the Ministry of Transportation.",
+    industry1: "Industry & Manufacturing",
+    industry2: "Mining & Energy",
+    industry3: "Oil & Gas",
+    industry4: "Hospitals & Healthcare Facilities",
+    industry5: "Chemical & Petrochemical",
+    industry6: "Pharmaceutical",
+    industry7: "Logistics & Infrastructure",
+    industry8: "Government or Institutions",
+
+    legalityTitle: "Legality &<br>Compliance",
+    legalityDesc: "PT Ecowaste Indonesia Prima operates with official permits and follows all applicable regulations in Indonesia, including:",
+    legal1: "B3 Waste Transportation Permit",
+    legal2: "Ministry of Environment Permit",
+    legal3: "Ministry of Transportation Permit",
+
+    footerDesc: "Safe, professional, and sustainable B3 hazardous waste transportation solutions throughout Indonesia.",
+    footerNav: "Navigation",
+    footerHome: "Home",
+    footerAbout: "About",
+    footerVision: "Vision & Mission",
+    footerLegal: "Licensing",
+    footerContact: "Contact",
+    footerContactTitle: "Contact",
+    footerFollow: "Follow Us"
+  },
+
+  "zh-CN": {
+    navHome: "首页",
+    navAbout: "关于我们",
+    navVision: "愿景与使命",
+    navServices: "我们的服务",
+    navLegality: "合法性与合规",
+    navContact: "联系我们",
+    navChat: "聊天",
+
+    tagline: "~ 废物转化为价值",
+    heroTitle: "建设更清洁、更绿色的未来",
+    heroDesc: "PT Ecowaste Indonesia Prima 在印度尼西亚提供安全、高效且负责任的 B3 危险废物物流解决方案。",
+    explore: "探索",
+    contactBtn: "联系我们",
+
+    aboutTitle: "关于我们",
+    aboutText1: "PT Ecowaste Indonesia Prima (EIP) 是一家从事 B3 危险废物运输服务的国家公司，拥有高标准，注重安全、法规合规以及环境可持续性。",
+    aboutText2: "公司秉承成为工业领域可信赖合作伙伴的承诺，提供从运输到最终处理的物流解决方案，并符合现行法规。",
+
+    visionTitle: "愿景与使命",
+    visionHead: "愿景",
+    visionText: "成为印度尼西亚领先的 B3 危险废物运输公司，在安全、合规、环境责任和可持续创新方面表现卓越。",
+    missionHead: "使命",
+    mission1: "提供安全、快速并符合法规的运输服务。",
+    mission2: "优先考虑工作安全和环境保护。",
+    mission3: "通过专业服务建立长期合作关系。",
+    mission4: "培养有能力且诚信的人力资源。",
+    mission5: "使用现代技术提高效率和透明度。",
+
+    coreTitle: "我们的核心价值",
+    value1Title: "卓越",
+    value1Desc: "以高标准提供最佳服务，并为所有客户和合作伙伴提供优质服务体验。",
+    value2Title: "合规",
+    value2Desc: "遵守并完善 B3 危险废物运输领域适用的所有法规和许可。",
+    value3Title: "运营安全",
+    value3Desc: "将安全作为所有利益相关者工作活动中的首要原则。",
+    value4Title: "工作诚信",
+    value4Desc: "在个人和公司的一切绩效活动中坚持诚信。",
+
+    servicesTitle: "我们的服务",
+    service1Title: "B3 危险废物运输",
+    service1Desc: "以高安全标准将客户现场的 B3 危险废物运输至处理或销毁设施。",
+    service2Title: "废物管理咨询",
+    service2Desc: "提供符合规定且高效的 B3 危险废物管理战略解决方案。",
+    service3Title: "综合废物物流",
+    service3Desc: "用于实时监控、跟踪和透明报告的综合物流系统。",
+
+    whyTitle: "为什么选择我们",
+    why1: "专用 B3 安全车队",
+    why2: "认证司机和工作人员",
+    why3: "基于技术的跟踪和监控系统",
+    why4: "全面遵守法规",
+    whyText1: "选择 B3 危险废物运输合作伙伴不仅仅是选择服务，更是选择信任、合规和安全保障。",
+    whyText2: "PT Ecowaste Indonesia Prima 为每位客户提供具有附加价值的解决方案。",
+    whyText3: "我们的每项服务都旨在支持环保且负责任的工业实践。",
+    whyText4: "凭借经验、集成系统以及对质量的高度承诺，PT Ecowaste Indonesia Prima 是重视安全、合规和可持续发展的公司的正确选择。",
+
+    industriesTitle: "服务行业",
+    industriesDesc: "Ecowaste Indonesia Prima 准备根据环境部和交通部授予的许可和合法性，为各工业领域提供 B3 危险废物运输服务。",
+    industry1: "工业与制造业",
+    industry2: "采矿与能源",
+    industry3: "石油与天然气",
+    industry4: "医院与医疗设施",
+    industry5: "化工与石化",
+    industry6: "制药",
+    industry7: "物流与基础设施",
+    industry8: "政府或机构",
+
+    legalityTitle: "合法性与<br>合规",
+    legalityDesc: "PT Ecowaste Indonesia Prima 持有官方许可证，并遵守印度尼西亚所有适用法规，包括：",
+    legal1: "B3 危险废物运输许可证",
+    legal2: "环境部许可证",
+    legal3: "交通部许可证",
+
+    footerDesc: "在印度尼西亚提供安全、专业和可持续的 B3 危险废物运输解决方案。",
+    footerNav: "导航",
+    footerHome: "首页",
+    footerAbout: "关于",
+    footerVision: "愿景与使命",
+    footerLegal: "许可",
+    footerContact: "联系",
+    footerContactTitle: "联系",
+    footerFollow: "关注我们"
+  }
+};
+
+function changeLang(lang){
+  localStorage.setItem("selectedLanguage", lang);
+  applyLanguage(lang);
+}
+
+function applyLanguage(lang){
+  const selectedLang = translations[lang] ? lang : "id";
+
+  document.documentElement.lang = selectedLang;
+  document.body.classList.remove("lang-id", "lang-en", "lang-cn");
+
+  if(selectedLang === "id"){
+    document.body.classList.add("lang-id");
+  }
+
+  if(selectedLang === "en"){
+    document.body.classList.add("lang-en");
+  }
+
+  if(selectedLang === "zh-CN"){
+    document.body.classList.add("lang-cn");
+  }
+
+  document.querySelectorAll("[data-lang]").forEach(el => {
+    const key = el.getAttribute("data-lang");
+
+    if(translations[selectedLang][key]){
+      el.innerHTML = translations[selectedLang][key];
+    }
+  });
+
+  document.querySelectorAll(".lang-switcher button").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  const activeBtn = document.getElementById("btn-" + selectedLang);
+  if(activeBtn){
+    activeBtn.classList.add("active");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function(){
+  const hamburger = document.getElementById("hamburger");
+  const navMenu = document.getElementById("nav-menu");
+  const navLinks = document.querySelectorAll(".menu a");
+
+  if(hamburger && navMenu){
+    hamburger.addEventListener("click", function(){
+      navMenu.classList.toggle("show");
+
+      const icon = this.querySelector("i");
+
+      if(navMenu.classList.contains("show")){
+        icon.classList.replace("fa-bars", "fa-xmark");
+      } else {
+        icon.classList.replace("fa-xmark", "fa-bars");
+      }
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if(navMenu && navMenu.classList.contains("show")){
+        navMenu.classList.remove("show");
+
+        const icon = hamburger.querySelector("i");
+        icon.classList.replace("fa-xmark", "fa-bars");
+      }
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e){
+      e.preventDefault();
+
+      const target = document.querySelector(this.getAttribute("href"));
+
+      if(target){
+        window.scrollTo({
+          top: target.offsetTop - 70,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+
+  const savedLang = localStorage.getItem("selectedLanguage") || "id";
+  applyLanguage(savedLang);
+});
+</script>
+
+</body>
+</html>

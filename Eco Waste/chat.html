@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Masuk</title>
+<a href="https://wa.me/6281234567890" class="wa-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+  <link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    margin: 0;
+    padding: 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1b5e20;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .chat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+  }
+
+  /* CHAT BOX GREEN STYLE */
+  .chat-box {
+    background: #ffffff;
+    border-left: 6px solid #2e7d32;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+  }
+
+  .chat-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(46,125,50,0.2);
+  }
+
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #1b5e20;
+  }
+
+  .time {
+    font-size: 12px;
+    color: #66bb6a;
+  }
+
+  .email {
+    font-size: 13px;
+    color: #388e3c;
+    margin-bottom: 8px;
+  }
+
+  .message {
+    font-size: 14px;
+    color: #2e2e2e;
+    line-height: 1.4;
+    background: #e8f5e9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c8e6c9;
+  }
+
+  .empty {
+    text-align: center;
+    color: #558b2f;
+    margin-top: 50px;
+  }
+</style>
+</head>
+
+<body>
+<a href="https://wa.me/6285891099220" class="wa-float" target="_blank">
+  <img src="../assets/wa.png" alt="WhatsApp">
+</a>
+  <div class="container">
+    <h2>📩 Chat Masuk</h2>
+
+    <div id="chatList" class="chat-grid"></div>
+    <div id="empty" class="empty"></div>
+  </div>
+
+<script>
+async function loadChat() {
+  try {
+    const res = await fetch("http://localhost:3000/chat");
+    const data = await res.json();
+
+    const container = document.getElementById("chatList");
+    const empty = document.getElementById("empty");
+
+    container.innerHTML = "";
+
+    if (!data || data.length === 0) {
+      empty.innerHTML = "Belum ada pesan masuk";
+      return;
+    }
+
+    empty.innerHTML = "";
+
+    data.forEach((item, index) => {
+
+      const time = item.waktu
+        ? new Date(item.waktu).toLocaleTimeString([], {
+            hour: '2-digit',
+            minute: '2-digit'
+          })
+        : "";
+
+      container.innerHTML += `
+        <div class="chat-box">
+          
+          <div class="chat-header">
+            <div class="name">${item.nama}</div>
+            <div class="time">${time}</div>
+          </div>
+
+          <div class="email">${item.email}</div>
+
+          <div class="message">
+            ${item.pesan}
+          </div>
+
+          <!-- STATUS BUTTON -->
+          <div style="margin-top:10px;">
+            <button id="status-${index}" 
+              onclick="toggleStatus(${index})"
+              style="
+                padding:6px 10px;
+                border:none;
+                border-radius:6px;
+                cursor:pointer;
+                background:#ffb300;
+                color:white;
+                font-size:12px;
+              ">
+              ⏳ Processing
+            </button>
+          </div>
+
+        </div>
+      `;
+    });
+
+  } catch (err) {
+    console.log("Error load chat:", err);
+  }
+}
+
+/* STATUS TOGGLE (FRONTEND ONLY) */
+function toggleStatus(id) {
+  const btn = document.getElementById("status-" + id);
+
+  if (btn.innerHTML.includes("Processing")) {
+    btn.innerHTML = "✅ Sent";
+    btn.style.background = "#2e7d32";
+  } else {
+    btn.innerHTML = "⏳ Processing";
+    btn.style.background = "#ffb300";
+  }
+}
+
+// load pertama kali
+loadChat();
+
+// auto refresh tiap 3 detik
+setInterval(loadChat, 3000);
+</script>
+</html>
