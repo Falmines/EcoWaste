@@ -88,11 +88,7 @@
     </div>
 
     <div class="menu" id="nav-menu">
-      <div class="lang-switcher">
-        <button type="button" onclick="changeLang('id')" id="btn-id">ID</button>
-        <button type="button" onclick="changeLang('en')" id="btn-en">EN</button>
-        <button type="button" onclick="changeLang('zh-CN')" id="btn-zh-CN">中文</button>
-      </div>
+      
 
       <a href="index.html" data-lang="navHome">Home</a>
       <a href="index.html#about" data-lang="navAbout">About Us</a>
@@ -101,6 +97,22 @@
       <a href="index.html#legality" data-lang="navLegality">Legality & Compliance</a>
       <a href="index.html#contact" data-lang="navContact">Kontak</a>
       <a href="chat.html" class="btn-chat" data-lang="navChat">Chat</a>
+
+ <div class="lang-switcher">
+
+        <button type="button" onclick="changeLang('id')" id="btn-id">
+          <img src="https://flagcdn.com/w20/id.png" alt="ID"> ID
+        </button>
+
+        <button type="button" onclick="changeLang('en')" id="btn-en">
+          <img src="https://flagcdn.com/w20/gb.png" alt="EN"> EN
+        </button>
+
+        <button type="button" onclick="changeLang('zh-CN')" id="btn-zh-CN">
+          <img src="https://flagcdn.com/w20/cn.png" alt="中文"> 中文
+        </button>
+
+</div>
     </div>
   </div>
 </nav>
@@ -110,7 +122,6 @@
   <div class="eco-bg">
     <i class="fa-solid fa-earth-asia eco-icon hero-earth"></i>
     <i class="fa-solid fa-leaf eco-icon hero-leaf"></i>
-    <i class="fa-solid fa-recycle eco-icon hero-recycle"></i>
   </div>
 
   <div class="container hero-wrapper">
@@ -130,13 +141,11 @@
         <a href="https://wa.me/6285183326247" target="_blank" class="btn-outline" data-lang="contactBtn">Hubungi Kami</a>
       </div>
     </div>
-
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop" alt="Environment">
-    </div>
   </div>
 </section>
-
+<section class="rope-divider">
+  <div class="rope-line"></div>
+</section>
 <!-- ABOUT -->
 <section id="about" class="about">
   <div class="eco-bg">
@@ -161,11 +170,12 @@
     </div>
   </div>
 </section>
-
+<section class="rope-divider">
+  <div class="rope-line"></div>
+</section>
 <!-- VISION -->
 <section class="vision" id="vision" style="background:#f9f9f9;">
   <div class="eco-bg">
-    <i class="fa-solid fa-lightbulb eco-icon vision-light"></i>
     <i class="fa-solid fa-fan eco-icon vision-wind"></i>
     <i class="fa-solid fa-leaf eco-icon vision-leaf"></i>
   </div>
@@ -196,13 +206,17 @@
     </div>
   </div>
 </section>
-
+<section class="rope-divider">
+  <div class="rope-line"></div>
+</section>
 <!-- CORE VALUES -->
 <section id="core-values" class="eip-values-section">
   <div class="eco-bg">
     <i class="fa-solid fa-shield-heart eco-icon value-shield"></i>
     <i class="fa-solid fa-recycle eco-icon value-recycle"></i>
     <i class="fa-solid fa-industry eco-icon value-industry"></i>
+    <i class="fa-solid fa-truck eco-icon service-truck"></i>
+    <i class="fa-solid fa-solar-panel eco-icon service-solar"></i>
   </div>
   <div class="eip-why-container-title">
     <div class="brand-top">
@@ -254,13 +268,13 @@
     </div>
   </div>
 </section>
-
+<section class="rope-divider">
+  <div class="rope-line"></div>
+</section>
 <!-- SERVICES -->
 <section id="services" class="eip-services-section">
   <div class="eco-bg">
     <i class="fa-solid fa-truck eco-icon service-truck"></i>
-    <i class="fa-solid fa-oil-can eco-icon service-oil"></i>
-    <i class="fa-solid fa-solar-panel eco-icon service-solar"></i>
   </div>
 <div class="eip-why-container-title">
     <div class="brand-top">
@@ -303,7 +317,9 @@
     </div>
   </div>
 </section>
-
+<section class="rope-divider">
+  <div class="rope-line"></div>
+</section>
 <!-- WHY US -->
 <section class="eip-why-section" id="why-us">
   <div class="eco-bg">
@@ -356,13 +372,17 @@
     </div>
   </div>
 </section>
-
+<section class="rope-divider">
+  <div class="rope-line"></div>
+</section>
 <!-- INDUSTRIES -->
 <section class="industries-serve" id="industries">
   <div class="eco-bg">
     <i class="fa-solid fa-industry eco-icon industry-factory"></i>
     <i class="fa-solid fa-flask eco-icon industry-lab"></i>
     <i class="fa-solid fa-leaf eco-icon industry-leaf"></i>
+    <i class="fa-solid fa-truck eco-icon service-truck"></i>
+    <i class="fa-solid fa-solar-panel eco-icon service-solar"></i>
   </div>
 
   <div class="industries-header">
@@ -395,7 +415,9 @@
     </ul>
   </div>
 </section>
-
+<section class="rope-divider">
+  <div class="rope-line"></div>
+</section>
 <!-- LEGALITY -->
 <section id="legality" class="legality-section">
   <div class="eco-bg">
@@ -477,11 +499,11 @@
 <script>
 const translations = {
   id: {
-    navHome: "Home",
-    navAbout: "About Us",
+    navHome: "Beranda",
+    navAbout: "Tentang Kami",
     navVision: "Visi & Misi",
-    navServices: "Our Services",
-    navLegality: "Legality & Compliance",
+    navServices: "Layanan",
+    navLegality: "Legalitas & Kepatuhan",
     navContact: "Kontak",
     navChat: "Chat",
 

@@ -182,21 +182,26 @@ section{
     background:#004d40;
 }
 
+/* NAVBAR BESAR */
 nav{
     width:100%;
-    background:#0f172a;
+    height:92px;
+    background:rgba(15,23,42,0.88);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
     position:fixed;
     top:0;
     left:0;
     z-index:1000;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
 }
 
 .nav-content{
-    display:flex;
-    justify-content:space-between;
+    height:92px;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
     align-items:center;
-    padding:18px 0;
+    gap:30px;
+    padding:0 50px;
 }
 
 .logo{
@@ -204,34 +209,44 @@ nav{
     align-items:center;
     gap:12px;
     color:white;
-    font-size:34px;
+    font-size:24px;
     font-weight:900;
+}
+
+.logo img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
 }
 
 .menu{
     display:flex;
+    justify-content:center;
     align-items:center;
-    gap:25px;
+    gap:34px;
 }
 
 .menu a{
     text-decoration:none;
     color:white;
-    font-size:28px;
+    font-size:20px;
     font-weight:700;
-    transition:.3s;
 }
 
-.menu a:hover{
-    color:#9ccc65;
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:16px;
 }
 
 .btn-chat{
     background:#9ccc65;
     color:#004d40 !important;
-    padding:10px 22px;
-    border-radius:10px;
-    font-weight:800;
+    padding:12px 24px;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:900;
+    text-decoration:none;
 }
 
 .btn-chat:hover{
@@ -274,7 +289,18 @@ nav{
 /* HERO */
 .hero{
     padding:160px 0 100px;
-    background:linear-gradient(to right,#0f172a,#14532d);
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(15,23,42,0.88),
+        rgba(20,83,45,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?q=80&w=1200&auto=format&fit=crop");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .hero-wrapper{
@@ -1188,7 +1214,7 @@ section > *{
     .eip-hexagon span{
         font-size:22px;
     }
-/* HEXAGON TEXT CENTER */
+/* TEXT HEXAGON RATA TENGAH */
 .eip-hexagon{
     display:flex !important;
     justify-content:center !important;
@@ -1197,7 +1223,7 @@ section > *{
 }
 
 .eip-hexagon span{
-    width:100%;
+    width:100% !important;
 
     display:flex !important;
     justify-content:center !important;
@@ -1207,7 +1233,9 @@ section > *{
 
     line-height:1.2 !important;
 
-    padding:0 10px;
+    padding:0 12px !important;
+
+    margin:0 auto !important;
 }
     .eip-description{
         margin-left:0;
@@ -1529,27 +1557,43 @@ section > *{
 .lang-switcher{
     display:flex;
     align-items:center;
-    gap:12px;
-    margin-left:20px;
+    gap:8px;
+
+    padding:7px 10px;
+    border-radius:999px;
+
+    background:rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.35);
 }
 
 .lang-switcher button{
-    background:#9ccc65;
+    display:flex;
+    align-items:center;
+    gap:7px;
 
     border:none;
+    background:transparent;
+    color:white;
 
-    color:#004d40;
-
-    font-size:18px;
+    font-size:15px;
     font-weight:800;
 
-    padding:10px 16px;
-
-    border-radius:10px;
+    padding:8px 12px;
+    border-radius:999px;
 
     cursor:pointer;
-
     transition:.3s;
+}
+
+.lang-switcher button:hover,
+.lang-switcher button.active{
+    background:rgba(255,255,255,0.28);
+}
+
+.lang-switcher button img{
+    width:20px;
+    height:14px;
+    object-fit:cover;
 }
 
 .lang-switcher button:hover{
@@ -1572,8 +1616,38 @@ section > *{
 }
 
 /* CORE VALUES TETAP RATA KIRI */
-.eip-values-section,
-.eip-values-section *{
+/* CORE VALUES */
+.eip-values-section{
+    text-align:left !important;
+}
+
+/* HEXAGON TETAP TENGAH */
+.eip-hexagon{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    text-align:center !important;
+}
+
+.eip-hexagon span{
+    width:100% !important;
+
+    text-align:center !important;
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    line-height:1.2 !important;
+
+    padding:0 15px !important;
+
+    margin:0 auto !important;
+}
+
+/* DESCRIPTION TETAP KIRI */
+.eip-description,
+.eip-description p{
     text-align:left !important;
 }
 
@@ -1594,3 +1668,96 @@ section > *{
     text-align:left !important;
 }
 
+/* LANGUAGE SWITCHER */
+.lang-switcher{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.lang-switcher button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    background:#9ccc65;
+    border:none;
+
+    color:#004d40;
+
+    font-size:18px;
+    font-weight:800;
+
+    padding:10px 18px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.lang-switcher button:hover{
+    background:white;
+    transform:translateY(-2px);
+}
+
+/* FLAG IMAGE */
+.lang-switcher button img{
+    width:16px;
+    height:16px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+}
+
+/* ===== ROPE DIVIDER PATTERN ===== */
+
+/* ===== FULL ROPE DIVIDER ===== */
+
+/* ===== FULL ROPE DIVIDER ===== */
+
+.rope-divider{
+    width:100%;
+    padding:20px 0;
+    overflow:hidden;
+}
+
+.rope-line{
+    width:100%;
+    height:14px;
+    border-radius:20px;
+    position:relative;
+
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #004d40 0px,
+        #004d40 16px,
+
+        #ffffff 16px,
+        #ffffff 32px,
+
+        #0f172a 32px,
+        #0f172a 48px
+    );
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,0.25),
+        inset 0 2px 4px rgba(255,255,255,0.35),
+        inset 0 -2px 4px rgba(0,0,0,0.25);
+}
+
+/* ujung tali */
+.rope-line::before,
+.rope-line::after{
+    content:"";
+    position:absolute;
+}
+
+/* supaya pseudo aman */
+.rope-line{
+    position:relative;
+}
